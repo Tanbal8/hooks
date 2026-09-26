@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Fetch from '../utils/fetch';
+import { request } from 'tanbal-utils';
 
 const useDataManager = (url) => {
     const [data, setData] = useState([]);

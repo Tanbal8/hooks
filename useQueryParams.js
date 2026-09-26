@@ -1,6 +1,6 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { set as setObject, get as getObject } from '../utils/object';
+import { set as setObject, get as getObject } from 'tanbal-utils';
 
 const useQueryParams = (initialState = {}, keys = {}, options = {}) => {
     const searchParams = useSearchParams();
