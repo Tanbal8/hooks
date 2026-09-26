@@ -12,7 +12,7 @@ const useDataManager = (url) => {
     ) => {
         try {
             setStatus('loading');
-            const result = await Fetch(url);
+            const result = await request(url);
             setData(result.data);
             setStatus('loaded');
             successCallback(result.data);
@@ -34,7 +34,7 @@ const useDataManager = (url) => {
         finallyCallback = () => {},
     ) => {
         try {
-            const result = await Fetch(url, {
+            const result = await request(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const useDataManager = (url) => {
     ) => {
 
         try {
-            const result = await Fetch(`${url}/${id}`, {
+            const result = await request(`${url}/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const useDataManager = (url) => {
         finallyCallback = () => {},
     ) => {
         try {
-            const result = await Fetch(url, {
+            const result = await request(url, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const useDataManager = (url) => {
         finallyCallback = () => {},
     ) => {
         try {
-            const result = await Fetch(`${url}/${id}`, {
+            const result = await request(`${url}/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
