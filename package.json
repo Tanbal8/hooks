@@ -1,6 +1,6 @@
 {
   "name": "tanbal-hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A collection of custom React and Next.js hooks.",
   "keywords": [
     "react",
